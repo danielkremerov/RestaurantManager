@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<<<<<<< HEAD
+<?import javafx.scene.control.ToggleButton?>
+=======
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+>>>>>>> CodeOptimization
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="748.0" prefWidth="1434.0" style="-fx-background-color: #C0B283;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#011628" height="609.0" layoutX="937.0" layoutY="139.0" stroke="#d00d0d03" strokeType="INSIDE" style="-fx-fill: #373737;" width="13.0" />
+      <TabPane layoutX="24.0" layoutY="161.0" prefHeight="565.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Employees">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="900.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <TableView fx:id="EmployeeTable" editable="true" layoutY="150.0" prefHeight="350.0" prefWidth="900.0" style="-fx-background-color: #F4F4F4;" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="EmployeeIdColumn" prefWidth="69.0" text="Id" />
+                              <TableColumn fx:id="FirstNameColumn" prefWidth="101.99996948242188" text="First Name" />
+                              <TableColumn fx:id="LastNameColumn" prefWidth="125.0" text="Last Name" />
+                              <TableColumn fx:id="PhoneColumn" prefWidth="134.0" text="Phone" />
+                              <TableColumn fx:id="EmailColumn" prefWidth="150.0" text="Email" />
+                              <TableColumn fx:id="StatusColumn" prefWidth="90.0" text="Status" />
+                              <TableColumn fx:id="UserNameColumn" prefWidth="96.0" text="User Name" />
+                              <TableColumn fx:id="PasswordColumn" prefWidth="116.0" text="Password" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="EditMenuBtn1" layoutX="593.0" layoutY="78.0" mnemonicParsing="false" onAction="#openEmployeeEditor" prefHeight="40.0" prefWidth="80.0" text="Edit" />
+                        <Button fx:id="RefreshBtn11" layoutX="593.0" layoutY="18.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="80.0" text="Refresh" />
+                        <VBox layoutX="184.0" layoutY="14.0" prefHeight="127.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Id" />
+                                    <TextField fx:id="SearchEmployeeIdText" onAction="#SearchEmployeeId" prefHeight="25.0" prefWidth="80.0" promptText="Id">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="First Name" />
+                                    <TextField fx:id="SearchFirstNameText" onAction="#SearchFirstName" prefHeight="25.0" prefWidth="80.0" promptText="First Name">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Last Name" />
+                                    <TextField fx:id="SearchLastNameText" onAction="#SearchLastName" prefHeight="25.0" prefWidth="80.0" promptText="Last Name">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="90.0" text="Username" />
+                                    <TextField fx:id="SearchUsernameText" onAction="#SearchUsername" prefHeight="25.0" prefWidth="90.0" promptText="Username">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="7.0" text="Advanced Search" />
+                        <Button fx:id="ExportEmployeesBtn" layoutX="714.0" layoutY="18.0" mnemonicParsing="false" onAction="#exportEmployees" prefHeight="40.0" prefWidth="80.0" text="Export" />
+                        <Button fx:id="mportEmployeesBtn" layoutX="714.0" layoutY="78.0" mnemonicParsing="false" onAction="#importEmployees" prefHeight="40.0" prefWidth="80.0" text="Import" />
+                        <VBox layoutX="389.0" layoutY="14.0" prefHeight="127.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Phone" />
+                                    <TextField fx:id="SearchPhoneText" onAction="#SearchPhone" prefHeight="25.0" prefWidth="80.0" promptText="Phone">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Email" />
+                                    <TextField fx:id="SearchEmailText" onAction="#SearchEmail" prefHeight="25.0" prefWidth="80.0" promptText="Email">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Status" />
+                                    <TextField fx:id="SearchEmployeeStatusText" onAction="#SearchEmployeeStatus" prefHeight="25.0" prefWidth="80.0" promptText="Status">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Menu Items">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <TableView fx:id="MenuTable" editable="true" layoutY="149.0" prefHeight="350.0" prefWidth="909.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="149.0">
+                           <columns>
+                              <TableColumn fx:id="IdColumn" prefWidth="97.0" text="Id" />
+                              <TableColumn fx:id="MenuDishColumn" prefWidth="154.0" text="Dish" />
+                              <TableColumn fx:id="PriceColumn" prefWidth="140.0" text="Price" />
+                              <TableColumn fx:id="MenuPeriodColumn" prefWidth="154.0" text="Period" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="EditMenuBtn" layoutX="593.0" layoutY="18.0" mnemonicParsing="false" onAction="#openMenuEditor" prefHeight="40.0" prefWidth="80.0" text="Edit" />
+                        <Button fx:id="RefreshBtn1" layoutX="593.0" layoutY="78.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="80.0" text="Refresh" />
+                        <VBox layoutX="184.0" layoutY="14.0" prefHeight="127.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Id" />
+                                    <TextField fx:id="SearchMenuIdText" onAction="#searchMenuId" prefHeight="25.0" prefWidth="80.0" promptText="Id">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Dish" />
+                                    <TextField fx:id="SearchMenuDishText" onAction="#searchMenuDish" prefHeight="25.0" prefWidth="80.0" promptText="Dish">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                                    <TextField fx:id="SearchMenuPriceText" onAction="#searchMenuPrice" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="70.0" prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Period" />
+                                    <TextField fx:id="SearchMenuPeriodText" onAction="#searchMenuPeriod" prefHeight="25.0" prefWidth="80.0" promptText="Period">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="14.0" text="Advanced Search" />
+                        <Button fx:id="ExportMenuBtn" layoutX="714.0" layoutY="18.0" mnemonicParsing="false" onAction="#exportMenu" prefHeight="40.0" prefWidth="80.0" text="Export" />
+                        <Button fx:id="ImportMenuBtn" layoutX="714.0" layoutY="78.0" mnemonicParsing="false" onAction="#importMenu" prefHeight="40.0" prefWidth="80.0" text="Import" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Orders">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="900.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <TableView fx:id="TotalOrderTable" editable="true" layoutY="150.0" prefHeight="350.0" prefWidth="900.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                           <columns>
+                              <TableColumn fx:id="TotalOrderIdColumn" prefWidth="69.00003051757812" text="Order Id" />
+                              <TableColumn fx:id="TotalTimeStampColumn" prefWidth="164.0" text="Time" />
+                              <TableColumn fx:id="TotalAssignedEmployeeColumn1" prefWidth="78.0" text="Employee" />
+                              <TableColumn fx:id="TotalTableNumberColumn" prefWidth="57.0" text="Table" />
+                              <TableColumn fx:id="TotalPriceColumn" prefWidth="84.99996948242188" text="Total Price" />
+                              <TableColumn fx:id="TotalSpecialRequestColumn" prefWidth="175.0" text="Special Request" />
+                              <TableColumn fx:id="TotalCommentColumn" minWidth="0.0" prefWidth="182.0" text="Comment" />
+                              <TableColumn fx:id="TotalStatusColumn" prefWidth="72.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="13.0" layoutY="14.0" text="Advanced Search" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="900.0">
+                           <children>
+                              <Button fx:id="OrdersRefreshBtn" layoutX="740.0" layoutY="78.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+                              <Button fx:id="ExportGroupedOrdersBtn" layoutX="740.0" layoutY="18.0" mnemonicParsing="false" onAction="#exportGroupedOrders" prefHeight="34.0" prefWidth="59.0" text="Export" />
+                              <Label layoutX="598.0" layoutY="19.0" text="Date Range" />
+                              <TextField fx:id="TotalOrdersDateRangeFromText" layoutX="564.0" layoutY="36.0" prefHeight="27.0" prefWidth="150.0" promptText="YYYY/MM/DD HH:MM" />
+                              <TextField fx:id="TotalOrdersDateRangeToText" layoutX="564.0" layoutY="64.0" onAction="#searchTotalOrdersDateRange" prefHeight="27.0" prefWidth="150.0" promptText="YYYY/MM/DD HH:MM" />
+                           </children>
+                        </AnchorPane>
+                        <VBox layoutX="370.0" layoutY="8.0" prefHeight="145.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="90.0" text="Table" />
+                                    <TextField fx:id="SearchTotalOrdersTableNumberText" onAction="#searchTotalOrdersTableNumber" prefHeight="25.0" prefWidth="90.0" promptText="Table">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Special Req." />
+                                    <TextField fx:id="SearchTotalOrdersRequesBtn" onAction="#searchTotalOrdersSpecialRequest" prefHeight="25.0" prefWidth="80.0" promptText="Request">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                                    <TextField fx:id="SearchTotalOrdersPriceText" onAction="#searchTotalOrdersPrice" prefHeight="25.0" prefWidth="80.0" promptText="Total Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Comment" />
+                                    <TextField fx:id="SearchTotalOrdersCommentText" onAction="#searchTotalOrdersComment" prefHeight="25.0" prefWidth="80.0" promptText="Comment">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="145.0" layoutY="8.0" prefHeight="145.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label fx:id="SerachOrderIdText1" prefHeight="25.0" prefWidth="80.0" text="Order Id" />
+                                    <TextField fx:id="SearchTotalOrderIdText" onAction="#searchTotalOrderId" prefHeight="25.0" prefWidth="80.0" promptText="OrderId">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Employee" />
+                                    <TextField fx:id="SearchTotalOrdersAssignedEmployeeText" onAction="#searchTotalOrdersAssignedEmployee" prefHeight="25.0" prefWidth="80.0" promptText="Employee">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="85.0" prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Status" />
+                                    <TextField fx:id="SearchTotalOrdersStatusTxt" onAction="#searchTotalOrdersStatus" prefHeight="25.0" prefWidth="80.0" promptText="Status">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Order Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="900.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <TableView fx:id="OrderHistoryTable" editable="true" layoutY="150.0" prefHeight="350.0" prefWidth="900.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                           <columns>
+                              <TableColumn fx:id="UniqueIdColumn" prefWidth="24.99993896484375" text="Id" />
+                              <TableColumn fx:id="OrderIdColumn" prefWidth="71.00003051757812" text="Order Id" />
+                              <TableColumn fx:id="TimeStampColumn" prefWidth="142.99996948242188" text="Time" />
+                              <TableColumn fx:id="AssignedEmployeeColumn" prefWidth="89.0" text="Employee" />
+                              <TableColumn fx:id="TableNumberColumn" prefWidth="53.0" text="Table" />
+                              <TableColumn fx:id="DishColumn" prefWidth="120.0" text="Dish" />
+                              <TableColumn fx:id="OrderPriceColumn" prefWidth="50.0" text="Price" />
+                              <TableColumn fx:id="SpecialRequestColumn" prefWidth="147.0" text="Special Request" />
+                              <TableColumn fx:id="CommentColumn" prefWidth="119.0" text="Comment" />
+                              <TableColumn fx:id="OrderStatusColumn" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="13.0" layoutY="14.0" text="Advanced Search" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="900.0">
+                           <children>
+                              <Button fx:id="RefreshBtn" layoutX="720.0" layoutY="18.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="80.0" text="Refresh" />
+                              <Button fx:id="ImportOrdersBtn" layoutX="814.0" layoutY="78.0" mnemonicParsing="false" onAction="#importOrders" prefHeight="40.0" prefWidth="80.0" text="Import" />
+                              <Button fx:id="ExportOrdersBtn" layoutX="814.0" layoutY="18.0" mnemonicParsing="false" onAction="#exportOrders" prefHeight="40.0" prefWidth="80.0" text="Export" />
+                              <Label layoutX="14.0" layoutY="56.0" text="Date Range" />
+                              <TextField fx:id="DateRangeFromText" layoutX="11.0" layoutY="84.0" prefHeight="27.0" prefWidth="150.0" promptText="YYYY/MM/DD HH:MM" />
+                              <TextField fx:id="DateRangeToText" layoutX="11.0" layoutY="120.0" onAction="#searchDateRange" prefHeight="27.0" prefWidth="150.0" promptText="YYYY/MM/DD HH:MM" />
+                              <VBox layoutX="370.0" layoutY="5.0" prefHeight="145.0" prefWidth="160.0" spacing="4.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="90.0" text="Table" />
+                                          <TextField fx:id="SearchTableNumberText" onAction="#searchTableNumber" prefHeight="25.0" prefWidth="90.0" promptText="Table">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="80.0" text="Dish" />
+                                          <TextField fx:id="SearchDishText" onAction="#searchDish" prefHeight="25.0" prefWidth="80.0" promptText="Dish">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                                          <TextField fx:id="SearchPriceText" onAction="#searchPrice" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="80.0" text="Comment" />
+                                          <TextField fx:id="SearchCommentText" onAction="#searchComment" prefHeight="25.0" prefWidth="80.0" promptText="Comment">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="539.0" layoutY="48.0" prefHeight="45.0" prefWidth="187.0">
+                                 <children>
+                                    <Label prefHeight="23.0" prefWidth="80.0" text="Status" />
+                                    <TextField fx:id="SearchStatusText" onAction="#searchStatus" prefHeight="25.0" prefWidth="91.0" promptText="status">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="539.0" layoutY="13.0" prefHeight="41.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Special " />
+                                    <TextField fx:id="SearchSpecialRequestText" onAction="#searchSpecialRequest" prefHeight="25.0" prefWidth="91.0" promptText="Request">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="169.0" layoutY="17.0" prefHeight="112.0" prefWidth="171.0" spacing="4.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="151.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="80.0" text="Unique ID" />
+                                          <TextField fx:id="searchUniqueId" onAction="#searchUniqueId" prefHeight="25.0" prefWidth="80.0" promptText="Id">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="151.0">
+                                       <children>
+                                          <Label fx:id="SerachOrderIdText" prefHeight="25.0" prefWidth="80.0" text="Order Id" />
+                                          <TextField fx:id="SearchOrderIdText" onAction="#searchOrderId" prefHeight="25.0" prefWidth="80.0" promptText="OrderId">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="21.0" prefWidth="160.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="80.0" text="Employee" />
+                                          <TextField fx:id="SearchAssignedEmployeeText" onAction="#searchAssignedEmployee" prefHeight="25.0" prefWidth="80.0" promptText="Employee">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="EditOrderHistoryBtn" layoutX="720.0" layoutY="78.0" mnemonicParsing="false" onAction="#openOrderEditor" prefHeight="40.0" prefWidth="80.0" text="Edit" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Billing">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="900.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <TableView fx:id="BillingTable" editable="true" layoutY="150.0" prefHeight="350.0" prefWidth="900.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                           <columns>
+                              <TableColumn fx:id="BillingOrderIdColumn" prefWidth="69.00003051757812" text="Order Id" />
+                              <TableColumn fx:id="BillingTimeStampColumn" prefWidth="164.0" text="Time" />
+                              <TableColumn fx:id="BillingTotalPriceColumn" prefWidth="90.0" text="Total Price" />
+                              <TableColumn fx:id="BillingCommentColumn" prefWidth="273.0" text="Comment" />
+                              <TableColumn fx:id="BillingStatusColumn" prefWidth="133.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="13.0" layoutY="14.0" text="Advanced Search" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="900.0">
+                           <children>
+                              <Button fx:id="BillingRefreshBtn" layoutX="730.0" layoutY="78.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="80.0" text="Refresh" />
+                              <Button fx:id="ExportBillBtn" layoutX="730.0" layoutY="18.0" mnemonicParsing="false" onAction="#exportBill" prefHeight="40.0" prefWidth="80.0" text="Export" />
+                              <Label layoutX="457.0" layoutY="28.0" text="Date Range" />
+                              <TextField fx:id="DateRangeBillingFromText" layoutX="423.0" layoutY="45.0" prefHeight="27.0" prefWidth="150.0" promptText="YYYY/MM/DD HH:MM" />
+                              <TextField fx:id="DateRangeBillingToText" layoutX="423.0" layoutY="73.0" onAction="#searchBillingDateRange" prefHeight="27.0" prefWidth="150.0" promptText="YYYY/MM/DD HH:MM" />
+                           </children>
+                        </AnchorPane>
+                        <VBox layoutX="145.0" layoutY="8.0" prefHeight="145.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label fx:id="SerachOrderIdText11" prefHeight="25.0" prefWidth="80.0" text="Order Id" />
+                                    <TextField fx:id="SearchBillingOrderIdText" onAction="#searchBillingOrderId" prefHeight="25.0" prefWidth="80.0" promptText="OrderId">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                                    <TextField fx:id="SearchBillingPrice" onAction="#searchBillingPrice" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Comment" />
+                                    <TextField fx:id="SearchCommentBillingText" onAction="#searchBillingComment" prefHeight="25.0" prefWidth="80.0" promptText="Comment">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Status" />
+                                    <TextField fx:id="SearchBillingStatusText" onAction="#searchBillingStatus" prefHeight="25.0" prefWidth="80.0" promptText="Status">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+<<<<<<< HEAD
+      <Button fx:id="Table1Btn" layoutX="652.0" layoutY="85.0" mnemonicParsing="false" onAction="#openOrderCreator" prefHeight="187.0" prefWidth="228.0" text="Table 1" />
+      <Button fx:id="Table2Btn" layoutX="652.0" layoutY="299.0" mnemonicParsing="false" onAction="#openOrderCreator" prefHeight="187.0" prefWidth="228.0" text="Table 2" />
+      <Button fx:id="Table3Btn" layoutX="652.0" layoutY="540.0" mnemonicParsing="false" onAction="#openOrderCreator" prefHeight="187.0" prefWidth="228.0" text="Table 3" />
+      <Label fx:id="WelcomeTextLbl" layoutX="669.0" layoutY="14.0" prefHeight="30.0" prefWidth="300.0" text="Label" />
+      <Button fx:id="SignoutBtn" layoutX="851.0" layoutY="1.0" mnemonicParsing="false" onAction="#signout" prefHeight="40.0" prefWidth="145.0" text="SignOut" />
+      <ComboBox fx:id="DishCombo" layoutX="425.0" layoutY="31.0" prefWidth="150.0" />
+      <ToggleButton layoutX="766.0" layoutY="100.0" mnemonicParsing="false" text="ToggleButton" />
+=======
+      <Label fx:id="WelcomeTextLbl" layoutX="958.0" layoutY="14.0" prefHeight="64.0" prefWidth="461.0" style="-fx-font-family: Times New Roman; -fx-font-size: 20; -fx-text-fill: #373737;" text="Welcome to your shyft" />
+      <Button fx:id="SignoutBtn" layoutX="1350.0" layoutY="25.0" mnemonicParsing="false" onAction="#signout" prefHeight="30.0" prefWidth="75.0" text="SignOut" />
+      <AnchorPane layoutX="958.0" layoutY="154.0" prefHeight="575.0" prefWidth="455.0" style="-fx-background-color: #DCD0C0;">
+         <children>
+            <Button fx:id="KitchenBtn" layoutX="18.0" layoutY="487.0" mnemonicParsing="false" onAction="#openTakeAway" prefHeight="52.0" prefWidth="432.0" text="Kitchen" />
+            <AnchorPane fx:id="Table1Pane" layoutX="18.0" layoutY="79.0" prefHeight="187.0" prefWidth="129.0" style="-fx-background-color: #3D9970; -fx-background-radius: 100;">
+               <children>
+                  <ToggleButton fx:id="Free1Toggle" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToFree" selected="true" text="Free">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Taken1" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="Taken1Toggle" layoutX="60.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToTaken" text="Taken" toggleGroup="$Taken1" />
+                  <Button fx:id="Table1Update" layoutX="29.0" layoutY="120.0" mnemonicParsing="false" onAction="#openOrderUpdater" text="Update" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="83.0" prefHeight="22.0" prefWidth="87.0" text="Table 1" textFill="#fcf3f3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Table2Pane" layoutX="318.0" layoutY="79.0" prefHeight="187.0" prefWidth="129.0" style="-fx-background-color: #3D9970; -fx-background-radius: 100;">
+               <children>
+                  <ToggleButton fx:id="Free2Toggle" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToFree" selected="true" text="Free">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Taken2" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="Taken2Toggle" layoutX="60.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToTaken" text="Taken" toggleGroup="$Taken2" />
+                  <Button fx:id="Table2Update" layoutX="29.0" layoutY="120.0" mnemonicParsing="false" onAction="#openOrderUpdater" text="Update" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="83.0" prefHeight="22.0" prefWidth="87.0" text="Table 2" textFill="#fcf3f3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Table4Pane" layoutX="18.0" layoutY="289.0" prefHeight="187.0" prefWidth="129.0" style="-fx-background-color: #3D9970; -fx-background-radius: 100;">
+               <children>
+                  <ToggleButton fx:id="Free4Toggle" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToFree" selected="true" text="Free">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Taken4" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="Taken4Toggle" layoutX="60.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToTaken" text="Taken" toggleGroup="$Taken4" />
+                  <Button fx:id="Table4Update" layoutX="29.0" layoutY="120.0" mnemonicParsing="false" onAction="#openOrderUpdater" text="Update" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="83.0" prefHeight="22.0" prefWidth="87.0" text="Table 4" textFill="#fcf3f3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Table5Pane" layoutX="318.0" layoutY="289.0" prefHeight="187.0" prefWidth="129.0" style="-fx-background-color: #3D9970; -fx-background-radius: 100;">
+               <children>
+                  <ToggleButton fx:id="Free5Toggle" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToFree" selected="true" text="Free">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Taken5" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="Taken5Toggle" layoutX="60.0" layoutY="38.0" mnemonicParsing="false" onAction="#changeToTaken" text="Taken" toggleGroup="$Taken5" />
+                  <Button fx:id="Table5Update" layoutX="33.0" layoutY="119.0" mnemonicParsing="false" onAction="#openOrderUpdater" text="Update" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="83.0" prefHeight="22.0" prefWidth="87.0" text="Table 5" textFill="#fcf3f3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Table3Pane" layoutX="131.0" layoutY="210.0" prefHeight="129.0" prefWidth="187.0" style="-fx-background-color: #3D9970; -fx-background-radius: 100;">
+               <children>
+                  <ToggleButton fx:id="Free3Toggle" layoutX="43.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeToFree" selected="true" text="Free">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Taken3" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="Taken3Toggle" layoutX="89.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeToTaken" text="Taken" toggleGroup="$Taken3" />
+                  <Button fx:id="Table3Update" layoutX="62.0" layoutY="88.0" mnemonicParsing="false" onAction="#openOrderUpdater" text="Update" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="54.0" prefHeight="22.0" prefWidth="87.0" text="Table 3" textFill="#fcf3f3">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="ShiftStartlbl1" layoutX="117.0" layoutY="22.0" prefHeight="45.0" prefWidth="221.0" style="-fx-text-fill: #373737; -fx-font-family: Times New Roman; -fx-font-size: 20;" text="Restaurant Plan" />
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="15.0" layoutX="24.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #373737;" width="1439.0" />
+      <Label fx:id="MotivationQuoteLbl" layoutX="24.0" layoutY="40.0" prefHeight="45.0" prefWidth="498.0" style="-fx-font-family: Times New Roman; -fx-text-fill: #373737; -fx-font-size: 20;" text="Label" />
+      <Label fx:id="ShiftStartlbl" layoutX="962.0" layoutY="78.0" prefHeight="45.0" prefWidth="489.0" style="-fx-text-fill: #373737; -fx-font-family: Times New Roman; -fx-font-size: 20;" text="Label" />
+      <Label layoutX="453.0" layoutY="36.0" prefHeight="85.0" prefWidth="449.0" text="BestBurger" textFill="#46b522">
+         <font>
+            <Font size="63.0" />
+         </font>
+      </Label>
+>>>>>>> CodeOptimization
+   </children>
+</AnchorPane>

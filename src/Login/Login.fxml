@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="453.0" style="-fx-background-color: #C0B283;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
+   <children>
+      <Label fx:id="isConnected" alignment="CENTER" layoutX="19.0" layoutY="63.0" prefHeight="32.0" prefWidth="415.0" text="Welcome to your shift. Please login to start your work" textFill="#bf1717">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="144.0" layoutY="110.0" promptText="Username" />
+      <PasswordField fx:id="txtPassword" layoutX="143.0" layoutY="148.0" promptText="Password" />
+      <Button layoutX="201.0" layoutY="196.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      
+   </children>
+</AnchorPane>

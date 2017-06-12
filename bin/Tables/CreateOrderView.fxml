@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="243.0" prefWidth="405.0" style="-fx-background-color: #C0B283;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tables.CreateOrderViewController">
+   <children>
+<<<<<<< HEAD
+      <Button fx:id="CreateNewOrderBtn" layoutY="194.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="27.0" prefWidth="329.0" text="Create New Order" />
+      <VBox layoutX="56.0" layoutY="35.0" prefHeight="145.0" prefWidth="160.0" spacing="4.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="151.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="80.0" text="Order Id" />
+                  <TextField fx:id="CreateOrderIdText" prefHeight="25.0" prefWidth="80.0" promptText="OrderId">
+=======
+      <Button fx:id="CreateNewOrderBtn" layoutX="38.0" layoutY="202.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="27.0" prefWidth="329.0" text="Create New Order" />
+      <VBox layoutX="8.0" layoutY="35.0" prefHeight="145.0" prefWidth="300.0" spacing="4.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="151.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="125.0" text="Order Id" />
+                  <TextField fx:id="CreateOrderIdText" prefHeight="25.0" prefWidth="170.0" promptText="Order Id">
+>>>>>>> CodeOptimization
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+<<<<<<< HEAD
+                  <Label prefHeight="25.0" prefWidth="90.0" text="Table" />
+                  <TextField fx:id="CreateTableNumberText" prefHeight="25.0" prefWidth="90.0" promptText="Table">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+=======
+                  <Label prefHeight="25.0" prefWidth="125.0" text="Dish" />
+                  <ComboBox fx:id="CreateDishCombo" prefHeight="27.0" prefWidth="170.0" promptText="Dish" />
+>>>>>>> CodeOptimization
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+<<<<<<< HEAD
+                  <Label prefHeight="25.0" prefWidth="80.0" text="Dish" />
+                  <TextField fx:id="CreateDishText" prefHeight="25.0" prefWidth="80.0" promptText="Dish">
+=======
+                  <Label prefHeight="25.0" prefWidth="125.0" text="Comment" />
+                  <TextField fx:id="CreateCommentText" prefHeight="25.0" prefWidth="170.0" promptText="Comment">
+>>>>>>> CodeOptimization
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+<<<<<<< HEAD
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                  <TextField fx:id="CreatePriceText" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="80.0" text="Comment" />
+                  <TextField fx:id="CreateCommentText" prefHeight="25.0" prefWidth="80.0" promptText="Comment">
+=======
+            <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="125.0" text="Special Request" />
+                  <TextField fx:id="CreateSpecialRequestText" prefHeight="25.0" prefWidth="170.0" promptText="Special Request">
+>>>>>>> CodeOptimization
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+<<<<<<< HEAD
+      <Button fx:id="AddDishBtn" layoutX="229.0" layoutY="100.0" mnemonicParsing="false" onAction="#addDish" prefHeight="48.0" prefWidth="80.0" text="Add Dish" />
+=======
+      <Button fx:id="AddDishBtn" layoutX="311.0" layoutY="75.0" mnemonicParsing="false" onAction="#addDish" prefHeight="48.0" prefWidth="80.0" text="Add Dish" />
+      <Label fx:id="StatusLbl" layoutX="47.0" layoutY="180.0" prefHeight="17.0" prefWidth="311.0" textFill="#dd0c0c" />
+      <Label fx:id="TableLbl" layoutX="16.0" layoutY="14.0" prefHeight="17.0" prefWidth="139.0" textFill="#dd0c0c" />
+>>>>>>> CodeOptimization
+   </children>
+</AnchorPane>

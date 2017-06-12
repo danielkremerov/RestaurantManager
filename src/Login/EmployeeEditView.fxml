@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #DCD0C0;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.EmployeeEditViewController">
+   <children>
+      <TabPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #DCD0C0;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Add">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0B283;">
+                     <children>
+                        <VBox layoutX="45.0" layoutY="24.0" prefHeight="208.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Id" />
+                                    <TextField fx:id="AddEmployeeIdText" prefHeight="25.0" prefWidth="80.0" promptText="Id">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="First Name" />
+                                    <TextField fx:id="AddFirstNameText" prefHeight="25.0" prefWidth="80.0" promptText="First Name">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Last Name" />
+                                    <TextField fx:id="AddLastNameText" prefHeight="25.0" prefWidth="80.0" promptText="Last Name">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="90.0" text="Username" />
+                                    <TextField fx:id="AddUsernameText" prefHeight="25.0" prefWidth="90.0" promptText="Username">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Password" />
+                                    <TextField fx:id="AddPasswordText" prefHeight="25.0" prefWidth="80.0" promptText="Password">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="179.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Phone" />
+                                    <TextField fx:id="AddPhoneText" prefHeight="25.0" prefWidth="80.0" promptText="Phone">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="186.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Email" />
+                                    <TextField fx:id="AddEmailText" prefHeight="25.0" prefWidth="80.0" promptText="Email">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="191.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Status" />
+                                    <TextField fx:id="AddStatusText" prefHeight="25.0" prefWidth="80.0" promptText="Status">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="AddEmployeeBtn" layoutX="253.0" layoutY="75.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="75.0" prefWidth="110.0" text="Add Employee" />
+                        <Label fx:id="AddLbl" alignment="CENTER" layoutX="45.0" layoutY="226.0" prefHeight="20.0" prefWidth="310.0" textFill="#da0a0a" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Update">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0B283;">
+                     <children>
+                        <Button fx:id="UpdateEmployeeBtn" layoutX="247.0" layoutY="74.0" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="75.0" prefWidth="110.0" text="Update" />
+                        <VBox layoutX="45.0" layoutY="24.0" prefHeight="208.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Id" />
+                                    <ComboBox fx:id="UpdateEmployeeIdCombo" prefWidth="80.0" promptText="Id" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="First Name" />
+                                    <TextField fx:id="UpdateFirstNameText" prefHeight="25.0" prefWidth="80.0" promptText="First Name">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Last Name" />
+                                    <TextField fx:id="UpdateLastNameText" prefHeight="25.0" prefWidth="80.0" promptText="Last Name">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="90.0" text="Username" />
+                                    <TextField fx:id="UpdateUsernameText" prefHeight="25.0" prefWidth="90.0" promptText="Username">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Password" />
+                                    <TextField fx:id="UpdatePasswordText" prefHeight="25.0" prefWidth="80.0" promptText="Password">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="179.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Phone" />
+                                    <TextField fx:id="UpdatePhoneText" prefHeight="25.0" prefWidth="80.0" promptText="Phone">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="186.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Email" />
+                                    <TextField fx:id="UpdateEmailText" prefHeight="25.0" prefWidth="80.0" promptText="Email">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="191.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Status" />
+                                    <TextField fx:id="UpdateStatusText" prefHeight="25.0" prefWidth="80.0" promptText="Status">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label fx:id="UpdateLbl" alignment="CENTER" layoutX="35.0" layoutY="233.0" prefHeight="20.0" prefWidth="330.0" textFill="#da0a0a" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Delete">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0B283;">
+                     <children>
+                        <HBox layoutX="49.0" layoutY="85.0" prefHeight="27.0" prefWidth="151.0">
+                           <children>
+                              <Label fx:id="DeleteIdLbl" prefHeight="25.0" prefWidth="80.0" text="Id" />
+                              <ComboBox fx:id="DeleteEmployeeIdCombo" prefWidth="80.0" promptText="Id" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="DeleteEmployeeBtn" layoutX="236.0" layoutY="85.0" mnemonicParsing="false" onAction="#changeToDeleteConfirmation" prefHeight="75.0" prefWidth="110.0" text="Delete" />
+                        <Label fx:id="DeleteLbl" alignment="CENTER" layoutX="35.0" layoutY="233.0" prefHeight="20.0" prefWidth="331.0" textFill="#da0a0a" />
+                        <Label fx:id="DeleteSelectionLbl" layoutX="55.0" layoutY="136.0" prefHeight="17.0" prefWidth="181.0" text="Confirm Deletion?" />
+                        <Button fx:id="DeleteYesBtn" layoutX="55.0" layoutY="169.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Yes" />
+                        <Button fx:id="DeleteNoBtn" layoutX="128.0" layoutY="169.0" mnemonicParsing="false" onAction="#notDelete" text="No" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Employee Log">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="LogTable" layoutX="21.0" layoutY="24.0" prefHeight="267.0" prefWidth="400.0" style="-fx-background-color: #C0B283;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="LoggerTimeStampColumn" prefWidth="127.0" text="TimeStamp" />
+                            <TableColumn fx:id="LoggerNameColumn" prefWidth="62.0" text="Name" />
+                              <TableColumn fx:id="LoggerTextColumn" prefWidth="201.0" text="Log Message" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

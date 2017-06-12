@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu.MenuEditViewController">
+   <children>
+      <TabPane prefHeight="256.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Add">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0B283;">
+                     <children>
+                        <VBox layoutX="58.0" layoutY="70.0" prefHeight="86.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Id" />
+                                    <TextField fx:id="AddIdText" prefHeight="25.0" prefWidth="80.0" promptText="Id">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Dish" />
+                                    <TextField fx:id="AddDishText" prefHeight="25.0" prefWidth="80.0" promptText="Dish">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                                    <TextField fx:id="AddPriceText" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="AddOrderBtn" layoutX="253.0" layoutY="75.0" mnemonicParsing="false" onAction="#insertDish" prefHeight="75.0" prefWidth="110.0" text="Add Dish" />
+                        <CheckBox fx:id="AddTemporaryCheck" layoutX="138.0" layoutY="166.0" mnemonicParsing="false" onAction="#triggerCheckBox" text="Temporary" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Update">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0B283;">
+                     <children>
+                        <Button fx:id="UpdateOrderBtn" layoutX="247.0" layoutY="74.0" mnemonicParsing="false" onAction="#updateDish" prefHeight="75.0" prefWidth="110.0" text="Update" />
+                        <VBox layoutX="40.0" layoutY="69.0" prefHeight="86.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Id" />
+                                    <ComboBox fx:id="UpdateIdCombo" prefWidth="80.0" promptText="Id" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Dish" />
+                                    <TextField fx:id="UpdateDishText" prefHeight="25.0" prefWidth="80.0" promptText="Dish">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Price" />
+                                    <TextField fx:id="UpdatePriceText" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Delete">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0B283;">
+                     <children>
+                        <Button fx:id="DeleteOrderBtn" layoutX="257.0" layoutY="95.0" mnemonicParsing="false" onAction="#changeToDeleteConfirmation" prefHeight="75.0" prefWidth="110.0" text="Delete" />
+                        <HBox layoutX="68.0" layoutY="32.0" prefHeight="100.0" prefWidth="151.0">
+                           <children>
+                              <Label fx:id="DeleteIdLbl" prefHeight="25.0" prefWidth="80.0" text="Id" />
+                              <ComboBox fx:id="DeleteIdCombo" prefWidth="80.0" promptText="Id" />
+                           </children>
+                        </HBox>
+<<<<<<< HEAD
+                        <Button fx:id="DeleteOrderBtn" layoutX="236.0" layoutY="61.0" mnemonicParsing="false" onAction="#openDeleteConfirmation" prefHeight="75.0" prefWidth="110.0" text="Delete" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Search">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="40.0" layoutY="19.0" prefHeight="145.0" prefWidth="160.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Order ID" />
+                                    <TextField fx:id="SearchIdText" prefHeight="25.0" prefWidth="80.0" promptText="I">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Date" />
+                                    <TextField fx:id="SearchDishText" prefHeight="25.0" prefWidth="80.0" promptText="Dish">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Time" />
+                                    <TextField fx:id="SearchPrice" prefHeight="25.0" prefWidth="80.0" promptText="Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="90.0" text="Table" />
+                                    <TextField fx:id="SearchTableNumberText" prefHeight="25.0" prefWidth="90.0" promptText="Table">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Total Price" />
+                                    <TextField fx:id="SearchTotalPrice" prefHeight="25.0" prefWidth="80.0" promptText="Total Price">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Details" />
+                                    <TextField fx:id="SearchDetailsText" prefHeight="25.0" prefWidth="80.0" promptText="Details">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="80.0" text="Comment" />
+                                    <TextField fx:id="SearchCommentText" prefHeight="25.0" prefWidth="80.0" promptText="Comment">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="SearchMenuBtn" layoutX="243.0" layoutY="74.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="110.0" text="Search" />
+=======
+                        <Button fx:id="DeleteYesBtn" layoutX="32.0" layoutY="132.0" mnemonicParsing="false" onAction="#deleteDish" text="Yes" />
+                        <Button fx:id="DeleteNoBtn" layoutX="153.0" layoutY="132.0" mnemonicParsing="false" onAction="#notDelete" text="No" />
+                        <Label fx:id="DeleteSelectionLbl" layoutX="36.0" layoutY="82.0" prefHeight="17.0" prefWidth="181.0" text="Confirm Deletion?" textFill="#e80e0e" />
+                        <Label fx:id="deletionSuccesfulLbl" layoutX="185.0" layoutY="14.0" prefHeight="17.0" prefWidth="182.0" textFill="#d01313" />
+>>>>>>> CodeOptimization
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="UpdatePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #C0B283;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tables.UpdateOrderViewController">
+   <children>
+      <TableView fx:id="CurrentOrderTable" layoutX="5.0" layoutY="80.0" prefHeight="272.0" prefWidth="443.0" style="-fx-background-color: #DCD0C0;">
+        <columns>
+          <TableColumn fx:id="UpdateIdColumn" prefWidth="31.0" text="Id" />
+            <TableColumn fx:id="UpdateOrderIdColumn" prefWidth="71.0" text="Order Id" />
+          <TableColumn fx:id="UpdateDishColumn" prefWidth="81.0" text="Dish" />
+            <TableColumn fx:id="UpdateCommentColumn" prefWidth="81.0" text="Comment" />
+            <TableColumn fx:id="UpdateSpecialRequestColumn" prefWidth="112.0" text="Special Request" />
+            <TableColumn fx:id="UpdateStatusColumn" prefWidth="77.0" text="Status" />
+        </columns>
+      </TableView>
+      <TabPane layoutX="466.0" layoutY="80.0" prefHeight="272.0" prefWidth="335.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <Button fx:id="AddDishBtn" layoutX="91.0" layoutY="198.0" mnemonicParsing="false" onAction="#addDishToCreatedOrder" prefHeight="27.0" prefWidth="179.0" text="Add" />
+                        <VBox layoutX="20.0" layoutY="14.0" prefHeight="145.0" prefWidth="313.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Order Id" />
+                                    <ComboBox fx:id="UpdateAddOrderIdCombo" prefHeight="25.0" prefWidth="150.0" promptText="Id" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Dish" />
+                                    <ComboBox fx:id="UpdateAddDishCombo" prefHeight="25.0" prefWidth="150.0" promptText="Dish" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Comment" />
+                                    <TextField fx:id="UpdateAddCommentText" prefHeight="25.0" prefWidth="150.0" promptText="Comment">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Special Request" />
+                                    <TextField fx:id="UpdateAddSpecialRequestText" prefHeight="25.0" prefWidth="150.0" promptText="Special  Request">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Update ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <VBox layoutX="20.0" layoutY="14.0" prefHeight="145.0" prefWidth="313.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="151.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Unique Id" />
+                                    <ComboBox fx:id="UpdateUniqueIdCombo" prefHeight="25.0" prefWidth="150.0" promptText="Id" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Dish" />
+                                    <ComboBox fx:id="UpdateDishCombo" prefHeight="25.0" prefWidth="150.0" promptText="Dish" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Comment" />
+                                    <TextField fx:id="UpdateCommentText" prefHeight="25.0" prefWidth="150.0" promptText="Comment">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="120.0" text="Special Request" />
+                                    <TextField fx:id="UpdateSpecialRequestText" prefHeight="25.0" prefWidth="150.0" promptText="Special Request">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="updateCreatedOrder" layoutX="91.0" layoutY="189.0" mnemonicParsing="false" onAction="#updateCreatedOrder" prefHeight="27.0" prefWidth="179.0" text="Update" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="deleteCreatedOrder" text="Delete">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="323.0" style="-fx-background-color: #DCD0C0;">
+                     <children>
+                        <Button fx:id="DeleteDishBtn" layoutX="140.0" layoutY="135.0" mnemonicParsing="false" onAction="#deleteCreatedOrder" prefHeight="27.0" prefWidth="179.0" text="Delete" />
+                        <HBox layoutX="20.0" layoutY="14.0" prefHeight="48.0" prefWidth="151.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="80.0" text="Unique Id" />
+                              <ComboBox fx:id="DeleteUniqueIdCombo" prefHeight="27.0" prefWidth="78.0" promptText="Id" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="StatusLbl" layoutX="188.0" layoutY="21.0" prefHeight="17.0" prefWidth="185.0" text="Update Current Order" textFill="#ee1818" />
+      <Label fx:id="TableLbl" layoutX="14.0" layoutY="13.0" prefHeight="17.0" prefWidth="139.0" textFill="#dd0c0c" />
+   </children>
+</AnchorPane>

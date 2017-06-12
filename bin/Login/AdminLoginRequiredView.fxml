@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="353.0" style="-fx-background-color: #C0B283;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.AdminLoginRequiredViewController">
+   <children>
+      <Label layoutX="11.0" layoutY="28.0" prefHeight="34.0" prefWidth="332.0" text="Only the Restaurant Manager can access this Menu" textFill="#d33232" />
+      <Button fx:id="BacktoLoginBtn" layoutX="34.0" layoutY="87.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="43.0" prefWidth="273.0" text="Login with Restaurant Manager Account" />
+      <Button fx:id="CloseAdminRequiredBtn" layoutX="34.0" layoutY="137.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="43.0" prefWidth="273.0" text="Go Back" />
+   </children>
+</AnchorPane>
